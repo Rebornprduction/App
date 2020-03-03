@@ -1,0 +1,380 @@
+ 
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+
+:root {
+	--white: #fff;
+	--primary: #009946;
+	--secondary: #26272C;
+	--bg-color: #131218;
+	--card_bg: #1D1E25;
+	--transparent: rgba(0, 0, 0, 0);
+	--text-light: #686869;
+	--red_color: #EF1010;
+	--green_color: #38F075;
+	--yelow_color: #FFA228;
+}
+
+.bg_color {
+	--background: var(--bg-color);
+}
+
+.d-flex {
+	display: flex !important;
+	align-items: center;
+	width: 100%;
+
+	.end {
+		margin-left: auto !important;
+		margin-right: 0 !important;
+		display: block;
+	}
+}
+
+.center_img {
+	position: relative;
+	overflow: hidden;
+
+	img {
+		&.crop_img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: -50% !important;
+			right: -50% !important;
+			margin: auto;
+		}
+
+	}
+}
+
+.button {
+	&.btn {
+		width: 100%;
+		font-size: 1rem;
+		font-weight: 400;
+		letter-spacing: 0px !important;
+		height: 45px;
+		--background: var(--primary);
+		text-transform: none;
+		color: var(--white);
+		--border-radius: 0px;
+		margin: 0;
+		--box-shadow: none;
+
+		ion-icon {
+			font-size: 1.4rem;
+		}
+
+		&:hover:not(.disable-hover) {
+			--background: var(--primary);
+		}
+
+		&.button-outline {
+			--background: var(--transparent);
+			color: var(--white);
+			--border-color: var(--primary);
+			--border-width: 1px;
+
+			&:hover:not(.disable-hover) {
+				--background: var(--transparent);
+			}
+		}
+
+		&.button-round {
+			--border-radius: 50px !important;
+		}
+
+	}
+}
+
+ion-header {
+	z-index: 999;
+
+	&::after {
+		display: none !important;
+	}
+
+	ion-toolbar {
+		--background: var(--secondary);
+		display: flex;
+		align-items: center;
+		min-height: 57px !important;
+		height: auto;
+		overflow: visible !important;
+
+		ion-buttons {
+			position: relative !important;
+			margin: 0;
+			--padding-end: 0 !important;
+			--padding-start: 0 !important;
+
+			.button-inner {
+				ion-icon {
+					//font-size: 1.5rem;
+					padding-left: 00px;
+					color: var(--white);
+				}
+
+				.button-text {
+					display: none;
+				}
+			}
+
+			ion-menu-button {
+				--color: var(--primary) !important;
+				//--padding-start: 0 !important;
+				--padding-end: 0 !important;
+				font-size: 1.8rem !important;
+
+				&.ios {
+					font-size: 2rem !important;
+				}
+
+			}
+
+			ion-back-button {
+				.button-native {
+					padding: 0 !important;
+				}
+			}
+
+			&.dark_icon {
+				ion-menu-button {
+					--color: var(--black) !important;
+				}
+
+
+				.button-inner {
+					ion-icon {
+						color: var(--black);
+
+					}
+				}
+			}
+
+			&.ios {
+				padding: 0 10px !important;
+			}
+
+		}
+
+		ion-title {
+			color: var(--white);
+			padding: 0 15px !important;
+			padding-right: 15px !important;
+			text-align: justify;
+			font-size: 1.1rem;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			position: relative !important;
+			overflow: visible !important;
+			line-height: 57px;
+
+			.end {
+				margin-right: 0;
+				margin-left: auto;
+				display: block;
+			}
+
+		}
+
+
+	}
+
+	&.bg_transparent {
+		//position: absolute;
+		z-index: 999;
+		width: 100%;
+		height: auto;
+
+		ion-toolbar {
+			--background: transparent;
+			--ion-color-base: transparent !important;
+		}
+	}
+}
+
+app-item-info,
+app-home {
+	ion-searchbar {
+		padding: 0;
+
+		.searchbar-input-container {
+			input {
+				box-shadow: none !important;
+				padding: 0 !important;
+				font-size: .6rem !important;
+				font-weight: 400 !important;
+				padding-right: 20px !important;
+			}
+		}
+
+		.searchbar-clear-button {
+			right: 8px !important;
+			--font-size: .5rem !important;
+		}
+
+		&.ios {
+			height: 30px;
+
+			.searchbar-input-container {
+				height: 20px;
+			}
+		}
+	}
+}
+
+ion-modal {
+	--background: rgba(0, 0, 0, 0) !important;
+}
+
+
+html[dir="rtl"] {
+	.d-flex .end {
+		margin-left: 0 !important;
+		margin-right: auto !important;
+	}
+
+	app-confirmed,
+	app-item-info,
+	app-home {
+		ion-searchbar .searchbar-input-container {
+			input {
+				padding-right: 0px !important;
+				padding-left: 20px !important;
+			}
+
+			.searchbar-clear-button {
+				right: unset !important;
+				left: 8px !important;
+			}
+		}
+
+		.cart_container {
+			right: unset !important;
+			left: -100% !important;
+
+			.container {
+				right: unset !important;
+				left: -100% !important;
+
+				ion-list ion-item .item_inner .item_img {
+					margin-right: 0 !important;
+					margin-left: 12px !important;
+				}
+			}
+
+			&.active {
+				left: 0 !important;
+
+				.container {
+					left: 0% !important;
+				}
+			}
+		}
+	}
+
+	app-home {
+		.container {
+			.tab_btn_container {
+				left: unset !important;
+				right: 0 !important;
+			}
+
+			.item_container {
+				.item::after {
+					background: linear-gradient(204deg, rgba(252, 252, 250, 0) 32%, rgba(0, 153, 70, 1) 96%) !important;
+				}
+			}
+
+		}
+	}
+
+	app-item-info {
+		.container {
+			.back_btn {
+				left: unset !important;
+				right: 0 !important;
+			}
+
+			.item_details_container ion-row ion-col .item-info ion-card ion-list ion-item ion-checkbox {
+				margin-right: 0 !important;
+				margin-left: 15px !important;
+			}
+
+			.item_details_container .realated_items {
+				&::before {
+					left: unset !important;
+					right: 10px !important;
+				}
+
+				h5 {
+					padding-left: 0 !important;
+					padding-right: 33px !important;
+				}
+
+				.scroll_container .item {
+					&:first-child {
+						margin-left: 5px !important;
+						margin-right: 30px !important;
+					}
+
+					&:last-child {
+						margin-right: 5px !important;
+						margin-left: 30px !important;
+					}
+				}
+			}
+		}
+	}
+
+	app-confirmed {
+		.cart_container {
+			left: 0% !important;
+
+			.container {
+				left: 0% !important;
+			}
+		}
+
+		@media (max-width: 576px) {
+
+			.cart_container {
+				right: unset !important;
+				left: -100% !important;
+
+				.container {
+					right: unset !important;
+					left: -100% !important;
+					 
+				}
+
+				&.active {
+					left: 0 !important;
+
+					.container {
+						left: 0% !important;
+					}
+				}
+			}
+		}
+	}
+}

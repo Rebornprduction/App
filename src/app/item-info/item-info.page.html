@@ -1,0 +1,393 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			<div class="d-flex">
+				<div class="logo">
+					<img src="assets/images/logo.png">
+				</div>
+				<div class="end">
+					<div class="search_box d-flex">
+						<ion-icon class="zmdi zmdi-search ion-text-center"></ion-icon>
+						<ion-searchbar class="ion-no-padding" searchIcon="hide"
+							placeholder="{{'search_item' | translate}}"></ion-searchbar>
+					</div>
+					<h4 class="ion-text-center" (click)="setViewType('active')">{{'items_in_cart' | translate}} (4)</h4>
+
+					<h5 class="ion-text-center" (click)="setViewType('active')">
+						<ion-icon class="zmdi zmdi-shopping-cart ion-text-start"></ion-icon>
+						<ion-badge>4</ion-badge>
+					</h5>
+				</div>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+
+	<div class="container d-flex">
+		<div class="back_btn">
+			<ion-buttons slot="start">
+				<ion-back-button text="" defaultHref=“home”></ion-back-button>
+			</ion-buttons>
+		</div>
+
+		<div class="item_details_container end">
+			<div style="padding:5px 5px 0 5px">
+				<ion-grid class="ion-no-padding">
+					<ion-row>
+						<ion-col size="12" size-lg="6" size-md="6" size-sm="6" style="padding-bottom: 0;">
+							<ion-card>
+								<h2>{{'description' | translate}}</h2>
+								<p>
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+									Ipsum has been the industry's standard dummy text ever since the 1500s,
+								</p>
+							</ion-card>
+
+							<ion-card class="video">
+								<div class="video_img center_img">
+									<img src="assets/images/video_thum.png" class="crop_img">
+								</div>
+								<div class="video_text">
+									<h3>Know How We cook it.</h3>
+									<h4>3 min video</h4>
+								</div>
+								<div class="play_icon">
+									<img src="assets/images/play_button.png">
+								</div>
+							</ion-card>
+
+							<div class="info">
+								<ion-grid class="ion-no-padding">
+									<ion-row>
+										<ion-col size="12" size-lg="4" size-md="4" size-sm="12">
+											<ion-card>
+												<div class="icon_box ion-text-center">
+													<img src="assets/images/ic_Serving.png">
+												</div>
+												<h2 class="ion-text-center">{{'servings' | translate}}</h2>
+												<h3>2 {{'people' | translate}}</h3>
+											</ion-card>
+										</ion-col>
+										<ion-col size="12" size-lg="4" size-md="4" size-sm="12">
+											<ion-card>
+												<div class="icon_box ion-text-center">
+													<img src="assets/images/ic_cooktime.png">
+												</div>
+												<h2 class="ion-text-center">{{'cook_time' | translate}}</h2>
+												<h3>12 mins</h3>
+											</ion-card>
+										</ion-col>
+										<ion-col size="12" size-lg="4" size-md="4" size-sm="12">
+											<ion-card>
+												<div class="icon_box ion-text-center">
+													<img src="assets/images/ic_energy.png">
+												</div>
+												<h2 class="ion-text-center">{{'energy' | translate}}</h2>
+												<h3>227 kcal.</h3>
+											</ion-card>
+										</ion-col>
+									</ion-row>
+								</ion-grid>
+							</div>
+
+							<ion-card class="ingredients">
+								<h2>{{'ingredients' | translate}}</h2>
+								<p>
+									<span>Flour</span>
+									<span>Sugar</span>
+									<span>Baking powder</span>
+									<span>Salt</span>
+									<span>Butter</span>
+									<span>Egg</span>
+									<span>Buter Milk</span>
+									<span>Vegetable oil</span>
+									<span>Baking powder</span>
+									<span>Butter</span>
+								</p>
+							</ion-card>
+						</ion-col>
+
+
+
+						<ion-col size="12" size-lg="6" size-md="6" size-sm="6" style="padding-bottom: 0;">
+							<div class="item-info">
+								<ion-card>
+									<ion-slides pager="true">
+										<ion-slide>
+											<div class="img_box center_img">
+												<img src="assets/images/1.png" class="crop_img">
+											</div>
+										</ion-slide>
+										<ion-slide>
+											<div class="img_box center_img">
+												<img src="assets/images/1.png" class="crop_img">
+											</div>
+										</ion-slide>
+										<ion-slide>
+											<div class="img_box center_img">
+												<img src="assets/images/1.png" class="crop_img">
+											</div>
+										</ion-slide>
+										<ion-slide>
+											<div class="img_box center_img">
+												<img src="assets/images/1.png" class="crop_img">
+											</div>
+										</ion-slide>
+									</ion-slides>
+									<div class="text_box">
+										<h1>Cream Pancake</h1>
+										<h3 class="d-flex"><span>{{'dessert' | translate}}</span> <span
+												class="end">$12.00</span></h3>
+									</div>
+
+									<ion-list lines="none">
+										<h2>{{'add_options' | translate}}</h2>
+										<ion-item>
+											<ion-checkbox slot="start"></ion-checkbox>
+											<ion-label>
+												<h4 class="d-flex">Extra Cheese <span class="end">$5.00</span></h4>
+											</ion-label>
+										</ion-item>
+										<ion-item>
+											<ion-checkbox slot="start"></ion-checkbox>
+											<ion-label>
+												<h4 class="d-flex">Extra Honey <span class="end">$3.00</span></h4>
+											</ion-label>
+										</ion-item>
+										<ion-item>
+											<ion-checkbox slot="start"></ion-checkbox>
+											<ion-label>
+												<h4 class="d-flex">Extra Mayonnaise <span class="end">$4.00</span></h4>
+											</ion-label>
+										</ion-item>
+										<ion-item>
+											<ion-checkbox slot="start"></ion-checkbox>
+											<ion-label>
+												<h4 class="d-flex">Extra Sugar <span class="end">$2.00</span></h4>
+											</ion-label>
+										</ion-item>
+									</ion-list>
+
+									<ion-button size="large" class="btn">{{'add_to_cart' | translate}}</ion-button>
+								</ion-card>
+							</div>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+
+
+			<div class="realated_items">
+				<h5>{{'realated_items_you_may_like' | translate}}</h5>
+
+				<div class="scroll_container">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/1.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>Cream Pancake</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/2.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>White Source Pasta</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/3.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>Farm Vill Pizza</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/1.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>Cream Pancake</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/2.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>White Source Pasta</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/3.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>Farm Vill Pizza</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/1.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>Cream Pancake</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/2.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>White Source Pasta</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/3.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>Farm Vill Pizza</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/1.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>Cream Pancake</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/2.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>White Source Pasta</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/3.png" class="crop_img">
+						</div>
+						<div class="text_box" (click)="item_detail()">
+							<h2>Farm Vill Pizza</h2>
+							<h3>$12.00</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Cart  Start-->
+
+	<div [ngClass]="viewType == 'active' ? 'cart_container active':'cart_container'">
+		<div class="container">
+			<div class="cart_header d-flex">
+				<h2 (click)="setViewType(null)">{{'close' | translate}}</h2>
+				<h4 class="ion-text-center end">{{'items_in_cart' | translate}} (4)</h4>
+			</div>
+
+			<ion-list lines="none">
+				<ion-item>
+					<div class="item_inner d-flex">
+						<div class="item_img center_img">
+							<img src="assets/images/2.png" class="crop_img">
+						</div>
+						<div class="item_details">
+							<h2>Chat Masala</h2>
+							<div class="d-flex">
+								<div class="add-remove d-flex">
+									<ion-icon class="zmdi zmdi-minus"></ion-icon>
+									<strong class="ion-text-center">1</strong>
+									<ion-icon class="zmdi zmdi-plus"></ion-icon>
+								</div>
+								<h3 class="end ion-text-end">$15.00</h3>
+							</div>
+						</div>
+					</div>
+				</ion-item>
+				<ion-item>
+					<div class="item_inner d-flex">
+						<div class="item_img center_img">
+							<img src="assets/images/3.png" class="crop_img">
+						</div>
+						<div class="item_details">
+							<h2>Veg Cheese Pizza</h2>
+							<div class="d-flex">
+								<div class="add-remove d-flex">
+									<ion-icon class="zmdi zmdi-minus"></ion-icon>
+									<strong class="ion-text-center">1</strong>
+									<ion-icon class="zmdi zmdi-plus"></ion-icon>
+								</div>
+								<h3 class="end ion-text-end">$18.00</h3>
+							</div>
+							<h4 class="d-flex">Extra Cheese <span class="ion-text-end end">$5.00</span></h4>
+						</div>
+					</div>
+				</ion-item>
+				<ion-item>
+					<div class="item_inner d-flex">
+						<div class="item_img center_img">
+							<img src="assets/images/6.png" class="crop_img">
+						</div>
+						<div class="item_details">
+							<h2>Fried Chicken</h2>
+							<div class="d-flex">
+								<div class="add-remove d-flex">
+									<ion-icon class="zmdi zmdi-minus"></ion-icon>
+									<strong class="ion-text-center">1</strong>
+									<ion-icon class="zmdi zmdi-plus"></ion-icon>
+								</div>
+								<h3 class="end ion-text-end">$20.00</h3>
+							</div>
+						</div>
+					</div>
+				</ion-item>
+				<ion-item>
+					<div class="item_inner d-flex">
+						<div class="item_img center_img">
+							<img src="assets/images/5.png" class="crop_img">
+						</div>
+						<div class="item_details">
+							<h2>Mashroom Pizza</h2>
+							<div class="d-flex">
+								<div class="add-remove d-flex">
+									<ion-icon class="zmdi zmdi-minus"></ion-icon>
+									<strong class="ion-text-center">1</strong>
+									<ion-icon class="zmdi zmdi-plus"></ion-icon>
+								</div>
+								<h3 class="end ion-text-end">$16.00</h3>
+							</div>
+						</div>
+					</div>
+				</ion-item>
+			</ion-list>
+
+
+			<div class="cart_footer">
+				<h2 class="d-flex">{{'total_amount' | translate}} <strong class="end ion-text-end">$74.00</strong></h2>
+				<h3 class="ion-text-center" (click)="confirmed()">{{'finish_ordering' | translate}}</h3>
+			</div>
+		</div>
+	</div>
+	<!--Cart  End-->
+
+</ion-content>

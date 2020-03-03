@@ -1,0 +1,7 @@
+{
+  "name": "suzlon_customer",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

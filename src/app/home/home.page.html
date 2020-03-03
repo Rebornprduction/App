@@ -1,0 +1,842 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			<div class="d-flex">
+				<div class="logo">
+					<img src="assets/images/logo.png">
+				</div>
+				<div class="end">
+					<div class="search_box d-flex">
+						<ion-icon class="zmdi zmdi-search ion-text-center"></ion-icon>
+						<ion-searchbar class="ion-no-padding" searchIcon="hide"
+							placeholder="{{'search_item' | translate}}"></ion-searchbar>
+					</div>
+
+					<h4 class="ion-text-center" (click)="setViewType('active')">{{'items_in_cart' | translate}} (4)</h4>
+					<h5 class="ion-text-center" (click)="setViewType('active')">
+						<ion-icon class="zmdi zmdi-shopping-cart ion-text-start"></ion-icon>
+						<ion-badge>4</ion-badge>
+					</h5>
+				</div>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<div class="container d-flex">
+		<div class="tab_btn_container">
+			<ion-segment [(ngModel)]="tab" lines="none">
+				<ion-segment-button value="popular">
+					<div class="img_box">
+						<img src="assets/images/ic_popular.png">
+					</div>
+					<ion-label>
+						{{'popular' | translate}}
+					</ion-label>
+				</ion-segment-button>
+				<ion-segment-button value="starter">
+					<div class="img_box">
+						<img src="assets/images/ic_starter.png">
+					</div>
+					<ion-label>
+						{{'starter' | translate}}
+					</ion-label>
+				</ion-segment-button>
+				<ion-segment-button value="dessert">
+					<div class="img_box">
+						<img src="assets/images/ic_Dessert.png">
+					</div>
+					<ion-label>
+						{{'dessert' | translate}}
+					</ion-label>
+				</ion-segment-button>
+				<ion-segment-button value="fast_food">
+					<div class="img_box">
+						<img src="assets/images/ic_fastfood.png">
+					</div>
+					<ion-label>
+						{{'fast_food' | translate}}
+					</ion-label>
+				</ion-segment-button>
+				<ion-segment-button value="main_course">
+					<div class="img_box">
+						<img src="assets/images/ic_maincourse.png">
+					</div>
+					<ion-label>
+						{{'main_course' | translate}}
+					</ion-label>
+				</ion-segment-button>
+				<ion-segment-button value="beverages">
+					<div class="img_box">
+						<img src="assets/images/ic_Beverages.png">
+					</div>
+					<ion-label>
+						{{'beverages' | translate}}
+					</ion-label>
+				</ion-segment-button>
+				<ion-segment-button value="dessert2">
+					<div class="img_box">
+						<img src="assets/images/ic_Dessert.png">
+					</div>
+					<ion-label>
+						{{'dessert' | translate}}
+					</ion-label>
+				</ion-segment-button>
+			</ion-segment>
+		</div>
+
+		<div class="tab_container end" [ngSwitch]="tab">
+
+			<div class="item_container" *ngSwitchCase="'popular'">
+				<ion-grid class="ion-no-padding">
+					<ion-row>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item active">
+								<div class="item_img center_img">
+									<img src="assets/images/1.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/2.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/3.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+
+
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/4.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item active">
+								<div class="item_img center_img">
+									<img src="assets/images/5.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/6.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/7.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/8.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/9.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/1.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/2.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex active">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/3.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item active">
+								<div class="item_img center_img">
+									<img src="assets/images/1.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/2.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item active">
+								<div class="item_img center_img">
+									<img src="assets/images/3.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+
+
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/4.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/5.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/6.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/7.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/8.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/9.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/1.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/2.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/3.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+
+			<div class="item_container" *ngSwitchCase="'starter'">
+				<ion-grid>
+					<ion-row>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/4.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/5.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/6.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+
+			<div class="item_container" *ngSwitchCase="'dessert'">
+				<ion-grid>
+					<ion-row>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/6.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/1.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/2.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/3.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+
+					</ion-row>
+				</ion-grid>
+			</div>
+
+			<div class="item_container" *ngSwitchCase="'fast_food'">
+				<ion-grid>
+					<ion-row>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/7.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/8.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/9.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+
+					</ion-row>
+				</ion-grid>
+			</div>
+
+			<div class="item_container" *ngSwitchCase="'main_course'">
+				<ion-grid>
+					<ion-row>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/7.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/9.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/8.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+
+			<div class="item_container" *ngSwitchCase="'beverages'">
+				<ion-grid>
+					<ion-row>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/5.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>White Source Pasta</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/4.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Cream Pancake</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+
+						<ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+							<div class="item">
+								<div class="item_img center_img">
+									<img src="assets/images/6.png" class="crop_img">
+								</div>
+								<div class="text_box" (click)="item_detail()">
+									<h2>Farm Villa Pizza</h2>
+									<h3>$12.00</h3>
+								</div>
+								<div class="option d-flex">
+									<ion-icon class="zmdi zmdi-minus-circle-outline"></ion-icon>
+									<h5 class="end">1</h5>
+								</div>
+							</div>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--Cart  Start-->
+
+	<div [ngClass]="viewType == 'active' ? 'cart_container active':'cart_container'">
+		<div class="container">
+			<div class="cart_header d-flex">
+				<h2 (click)="setViewType(null)">{{'close' | translate}}</h2>
+				<h4 class="ion-text-center end">{{'items_in_cart' | translate}} (4)</h4>
+			</div>
+
+			<ion-list lines="none">
+				<ion-item>
+					<div class="item_inner d-flex">
+						<div class="item_img center_img">
+							<img src="assets/images/2.png" class="crop_img">
+						</div>
+						<div class="item_details">
+							<h2>Chat Masala</h2>
+							<div class="d-flex">
+								<div class="add-remove d-flex">
+									<ion-icon class="zmdi zmdi-minus"></ion-icon>
+									<strong class="ion-text-center">1</strong>
+									<ion-icon class="zmdi zmdi-plus"></ion-icon>
+								</div>
+								<h3 class="end ion-text-end">$15.00</h3>
+							</div>
+						</div>
+					</div>
+				</ion-item>
+				<ion-item>
+					<div class="item_inner d-flex">
+						<div class="item_img center_img">
+							<img src="assets/images/3.png" class="crop_img">
+						</div>
+						<div class="item_details">
+							<h2>Veg Cheese Pizza</h2>
+							<div class="d-flex">
+								<div class="add-remove d-flex">
+									<ion-icon class="zmdi zmdi-minus"></ion-icon>
+									<strong class="ion-text-center">1</strong>
+									<ion-icon class="zmdi zmdi-plus"></ion-icon>
+								</div>
+								<h3 class="end ion-text-end">$18.00</h3>
+							</div>
+							<h4 class="d-flex">Extra Cheese <span class="ion-text-end end">$5.00</span></h4>
+						</div>
+					</div>
+				</ion-item>
+				<ion-item>
+					<div class="item_inner d-flex">
+						<div class="item_img center_img">
+							<img src="assets/images/6.png" class="crop_img">
+						</div>
+						<div class="item_details">
+							<h2>Fried Chicken</h2>
+							<div class="d-flex">
+								<div class="add-remove d-flex">
+									<ion-icon class="zmdi zmdi-minus"></ion-icon>
+									<strong class="ion-text-center">1</strong>
+									<ion-icon class="zmdi zmdi-plus"></ion-icon>
+								</div>
+								<h3 class="end ion-text-end">$20.00</h3>
+							</div>
+						</div>
+					</div>
+				</ion-item>
+				<ion-item>
+					<div class="item_inner d-flex">
+						<div class="item_img center_img">
+							<img src="assets/images/5.png" class="crop_img">
+						</div>
+						<div class="item_details">
+							<h2>Mashroom Pizza</h2>
+							<div class="d-flex">
+								<div class="add-remove d-flex">
+									<ion-icon class="zmdi zmdi-minus"></ion-icon>
+									<strong class="ion-text-center">1</strong>
+									<ion-icon class="zmdi zmdi-plus"></ion-icon>
+								</div>
+								<h3 class="end ion-text-end">$16.00</h3>
+							</div>
+						</div>
+					</div>
+				</ion-item>
+			</ion-list>
+
+
+			<div class="cart_footer">
+				<h2 class="d-flex">{{'total_amount' | translate}} <strong class="end ion-text-end">$74.00</strong></h2>
+				<h3 class="ion-text-center" (click)="confirmed()">{{'finish_ordering' | translate}}</h3>
+			</div>
+		</div>
+	</div>
+	<!--Cart  End-->
+</ion-content>
